@@ -51,6 +51,7 @@ pipeline {
                         cat reports/bandit.txt
                         # COMPUERTA: termina con error solo si hay hallazgos High (-lll)
                         bandit -r app.py -lll -q > /dev/null || true
+                    '
                 '''
             }
         }
